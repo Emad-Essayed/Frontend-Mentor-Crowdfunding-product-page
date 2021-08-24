@@ -1,0 +1,240 @@
+/* SELECTION OPTION MODAL Start*/
+.selections-option.modal {
+  position: relative;
+  top: 4%;
+
+  .default-control {
+    display: none !important;
+  }
+
+  .modal-control {
+    display: block !important;
+  }
+
+  .btn-close-modal {
+    display: block !important;
+    position: absolute;
+    top: 2.5%;
+    right: 6%;
+    z-index: 2;
+    cursor: pointer;
+    @extend %trans-300;
+
+    &:hover path {
+      opacity: 1;
+    }
+  }
+
+  .option {
+    position: relative;
+    @extend %trans-200;
+
+    &.selected {
+      border: 2px solid $moderate-cyan;
+    }
+
+    .modal-control {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .checkbox {
+      margin-right: 1.3rem;
+
+      input[type="radio"] {
+        appearance: none;
+
+        &:checked + label::after {
+          content: "";
+          width: 1.5rem;
+          height: 1.5rem;
+          position: absolute;
+          top: 0.5rem;
+          left: 0.5rem;
+          background-color: $moderate-cyan;
+          border-radius: 50%;
+        }
+      }
+
+      label {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: relative;
+          display: inline-block;
+          width: 2.5rem;
+          height: 2.5rem;
+          border: 2px solid $border-gary;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    h4 {
+      @extend %trans-200;
+      cursor: pointer;
+
+      &:hover {
+        color: $moderate-cyan;
+      }
+    }
+
+    .pledge {
+      display: none;
+      width: 100%;
+      margin-top: 5rem;
+      flex-direction: column;
+
+      &.show {
+        display: flex;
+      }
+
+      h5 {
+        margin: 5rem auto 2rem;
+        text-align: center;
+        color: $dark-gray;
+        font-weight: 500;
+      }
+      .seperator {
+        position: absolute;
+        right: 0;
+        bottom: 30%;
+        width: 100%;
+        height: 0.15rem;
+        background-color: $border-gary;
+      }
+
+      form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 5%;
+
+        .pledge-box {
+          position: relative;
+
+          &::before {
+            content: "$";
+            position: absolute;
+            top: 32%;
+            left: 20%;
+            color: lighten($dark-gray, 20%);
+            font-weight: 500;
+          }
+
+          .pledge-value {
+            flex-basis: 20%;
+            display: inline-block;
+            width: 9rem;
+            height: 4.5rem;
+            max-width: 20rem;
+            border-radius: 2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 3px 1rem 0 3.5rem;
+            border: 1px solid $border-gary;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              border-color: $moderate-cyan;
+            }
+          }
+        }
+
+        .continue {
+          flex-basis: 50%;
+          display: block;
+          height: 4.5rem;
+          line-height: 4.5rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.success {
+  position: fixed;
+  top: 15%;
+  left: 2%;
+  right: 2%;
+
+  .success-wrapper {
+    margin: auto;
+    max-width: 45rem;
+    text-align: center;
+    background-color: white;
+    padding: 4rem 2rem;
+
+    h3 {
+      color: $black;
+      margin: 2rem auto 3rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.8;
+    }
+
+    .btn-success {
+      margin-top: 3rem;
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+      height: 4.5rem;
+      line-height: 4.5rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .selections-option.modal .options-list {
+    .option {
+      .option-header .option-title {
+        justify-content: flex-start;
+      }
+
+      .option-footer {
+        position: absolute;
+        top: 8%;
+        right: 4%;
+      }
+      .pledge {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8rem;
+
+        .seperator {
+          bottom: 35%;
+        }
+
+        h5 {
+          flex-basis: 50%;
+          margin: 0;
+          text-align: left;
+        }
+
+        form {
+          flex-basis: 40%;
+        }
+      }
+    }
+  }
+
+  .success {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+/* SELECTION OPTION MODAL End*/

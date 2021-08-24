@@ -1,0 +1,128 @@
+/*  INTRO Start */
+.intro {
+  margin-top: -9.5rem;
+  padding: 5.6rem 0.7rem 3.5rem 0.9rem;
+  .intro-description {
+    .logo-masterCraft {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 {
+      margin: auto;
+      width: 90%;
+
+      font: {
+        size: 2rem;
+      }
+    }
+
+    p {
+      margin-top: 1.6rem;
+      font-size: 1.4rem;
+      line-height: 1.7;
+    }
+
+    .intro-btns {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > button {
+        cursor: pointer;
+        @extend %trans-300;
+      }
+
+      .btn-back {
+        flex-basis: 77%;
+      }
+
+      .btn-bookmark {
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.bookmarked {
+          button {
+            color: $dark-cyan;
+            font-weight: 700 !important;
+          }
+
+          svg {
+            circle {
+              fill: $moderate-cyan;
+            }
+            path {
+              fill: white;
+            }
+          }
+        }
+
+        button {
+          display: none;
+        }
+
+        &:hover img {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    padding-bottom: 4.5rem;
+    .intro-description {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        margin-top: 1.3rem;
+        font-size: 1.6rem;
+      }
+
+      .intro-btns {
+        margin-top: 3.5rem;
+        padding-left: 2.3rem;
+
+        .btn-back {
+          flex-basis: 35%;
+        }
+
+        .btn-bookmark {
+          flex-basis: 30%;
+          position: relative;
+
+          &.bookmarked {
+            flex-basis: 32%;
+          }
+
+          button {
+            display: block;
+            width: 87%;
+            color: $dark-gray;
+            background-color: $border-gary;
+            font-size: 1.6rem;
+            padding-left: 4.5rem;
+
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+
+          svg {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+/*  INTRO End */

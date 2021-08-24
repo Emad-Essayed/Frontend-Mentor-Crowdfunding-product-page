@@ -1,0 +1,145 @@
+/* SELECTION OPTION Start */
+.selections-option {
+  margin-top: 2rem;
+  text-align: left;
+  padding: 4rem 0.7rem 4rem 0.9rem;
+  color: $black;
+
+  p {
+    margin-top: 2.5rem;
+    font-size: 1.3rem;
+    line-height: 1.73;
+    color: $dark-gray;
+  }
+
+  .options-list {
+    margin-top: 3.3rem;
+
+    .option {
+      border: 1px solid $border-gary;
+      margin-top: 2.4rem;
+      padding: 2.3rem 2.2rem;
+      border-radius: 0.9rem;
+
+      &.out-of-stock {
+        opacity: 0.5;
+      }
+
+      .option-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h4,
+        h5 {
+          font-size: 1.4rem;
+        }
+
+        h5 {
+          margin-top: 0.5rem;
+          color: $moderate-cyan;
+        }
+      }
+
+      .option-footer {
+        margin-top: 2.5rem;
+
+        .rest-numbers {
+          font-size: 1.6rem;
+          line-height: normal;
+          margin-top: -0.5rem;
+
+          span {
+            position: relative;
+            top: 0.5rem;
+            color: black;
+            display: inline-block;
+            padding-right: 0.9rem;
+
+            font: {
+              size: 3.1rem;
+              weight: 700;
+            }
+          }
+        }
+
+        .btn-reward {
+          width: 15.8rem;
+          font-size: 1.5rem;
+          line-height: 4.8rem;
+          height: 4.8rem;
+          margin-top: 2.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .selections-option {
+    padding: 5rem 2.7rem 4rem 2.9rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 3.6rem;
+      padding-left: 0.4rem;
+      font-size: 1.6rem;
+      line-height: 1.88;
+      font-weight: 500;
+
+      &:nth-of-type(2) {
+        margin-top: 2.8rem;
+      }
+    }
+
+    .options-list {
+      margin-top: 4.1rem;
+      width: 99%;
+
+      .option {
+        padding: 3.7rem 3rem 3.2rem;
+
+        .option-header {
+          .option-title {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5%;
+            h4 {
+              font-size: 1.85rem;
+            }
+
+            h5 {
+              margin-top: 0;
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        p {
+          margin-top: 2.3rem;
+        }
+
+        .option-footer {
+          margin-top: 1.4rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .rest-numbers {
+            margin-top: 0;
+          }
+
+          button {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* SELECTION OPTION End */
